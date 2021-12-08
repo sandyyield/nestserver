@@ -6,16 +6,8 @@ import { Request } from 'express';
 export class HomeController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/api/homehello')
-  getHello(): string {
-    return this.appService.getHello();
-  }
-
   @Get('/api/home')
   getUserInfo(@Req() request: Request): string {
-    // console.log(request);
-    console.log(request);
-
-    return 'userinfo' + request.query;
+    return 'userinfo' + request;
   }
 }
