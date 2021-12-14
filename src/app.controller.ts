@@ -16,6 +16,6 @@ export class AppController {
     // console.log(request);
     console.log(request);
 
-    return 'userinfo' + request.query;
+    return 'userinfo' + request;
   }
 }
