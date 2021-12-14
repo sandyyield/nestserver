@@ -117,7 +117,7 @@ export class OSSService {
     const fileName = path.posix.basename(target);
     // const writeStream = fs.createWriteStream(`F:\\steam\\${fileName}`);
     const downloadPath = !dir
-      ? `${__dirname}\\${fileName}`
+      ? `${'./'}\\${fileName}`
       : path.join(dir, fileName);
     const writeStream = fs.createWriteStream(downloadPath);
     result.stream.pipe(writeStream);
@@ -131,7 +131,7 @@ export class OSSService {
   async downloadLogByShopcode(shopcode: string) {
     if (this.isExistObject(shopcode)) {
       if (this.isExistObject(shopcode)) {
-        const dir = path.join(__dirname, 'logFiles');
+        const dir = path.join('./', 'logFiles');
         const p = path.join(dir, shopcode);
         //创建相关文件夹
         fileUtil.CreateDirIfNotExist(p);

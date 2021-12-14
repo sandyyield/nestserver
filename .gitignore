@@ -39,3 +39,4 @@ yarn.lock
 
 #ignore config
 configuration/
+logFiles/
